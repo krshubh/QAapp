@@ -21,7 +21,7 @@ def get_qa_response(image_path):
     return response.text
 
 @app.route("/test", methods=['GET'])
-def qa():
+def test():
     return jsonify({'success' : 'true'})
 
 @app.route("/", methods=['POST'])
