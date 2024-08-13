@@ -28,3 +28,7 @@ def qa():
         img_f.write(base64.b64decode(b64_img))
     ans = get_qa_response(image_path=img_path)
     return jsonify({'answer' : ans})
+
+if __name__ == "__main__":
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=8080)
