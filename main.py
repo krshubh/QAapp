@@ -20,6 +20,10 @@ def get_qa_response(image_path):
     genai.delete_file(sample_file.name)
     return response.text
 
+@app.route("/test", methods=['GET'])
+def qa():
+    return jsonify({'success' : 'true'})
+
 @app.route("/", methods=['POST'])
 def qa():
     b64_img = request.form['image']
